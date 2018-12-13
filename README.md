@@ -1,4 +1,4 @@
-# RTL8821CU_RTL8811CU_driver
+# RTL8821CU_RTL8811CU_driver - version v5.4.1
 RTL8811CU driver
 
 The Realtek RTL8811CU-CG is a highly integrated single-chip that supports 1-stream 802.11ac solutions with Multi-user MIMO (Multiple-Input, Multiple-Output) and Wireless LAN (WLAN) USB interface controller. It combines a WLAN MAC, a 1T1R capable WLAN baseband, and RF in a single chip. The RTL8811CU-CG provides an outstanding solution for a high-performance integrated wireless device.:
@@ -65,6 +65,15 @@ make
 #install
 sudo make install
 sudo modprobe 8821cu
+
+#uninstall the driver using make
+sudo make uninstall
+
+# or unstall directly if make is not installed
+KVER=$(uname -r)
+MODFILE=/lib/modules/$KVER/kernel/drivers/net/wireless/8821cu.ko
+sudo rm -f $MODFILE
+sudo /sbin/depmod -a $KVER
 ```
 #### Option 2 - DKMS build (verified on Debian 9)
 
