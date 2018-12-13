@@ -1,0 +1,2 @@
+# RTL8821CU_driver_v5.2.15.3
+Driver for RTL8821CU, RTL8811CU USB Wi-Fi NIC
