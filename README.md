@@ -69,7 +69,7 @@ sudo modprobe 8821cu
 #uninstall the driver using make
 sudo make uninstall
 
-# or unstall directly if make is not installed
+# or unistall directly if make is not installed
 KVER=$(uname -r)
 MODFILE=/lib/modules/$KVER/kernel/drivers/net/wireless/8821cu.ko
 sudo rm -f $MODFILE
