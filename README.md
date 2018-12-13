@@ -49,9 +49,9 @@ ls -l /usr/src/linux-headers-$(uname -r)
 #### Option 1 - Direct build
 
 ```bash
-git clone https://github.com/AxiomwareSystems/RTL8821CU_driver.git
+git clone https://github.com/axiomware/RTL8821CU_driver_v5.2.15.3.git
 
-cd RTL8821CU_driver/driver
+cd RTL8821CU_driver_v5.2.15.3/driver
 
 # Modify Makefile, if needed (see installation document for details)
 # default Makefile is for:
@@ -76,7 +76,7 @@ sudo apt-get install dkms
 DRV_NAME=rtl8821CU
 DRV_VERSION=5.2.15.3
 
-git clone https://github.com/AxiomwareSystems/RTL8821CU_driver.git
+git clone https://github.com/axiomware/RTL8821CU_driver_v5.2.15.3.git
 
 # Modify Makefile, if needed (see installation document for details) 
 # default Makefile is for:
@@ -84,7 +84,7 @@ git clone https://github.com/AxiomwareSystems/RTL8821CU_driver.git
 # Concurrent mode enabled
 # Monitor mode enabled
 
-sudo cp -r  RTL8821CU_driver/driver /usr/src/${DRV_NAME}-${DRV_VERSION}
+sudo cp -r  RTL8821CU_driver_v5.2.15.3/driver /usr/src/${DRV_NAME}-${DRV_VERSION}
 
 # Build and install
 sudo dkms add -m ${DRV_NAME} -v ${DRV_VERSION}
